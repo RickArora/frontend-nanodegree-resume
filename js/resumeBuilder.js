@@ -3,26 +3,39 @@ var bio = {
 
 	"Name":"Ricky Arora",
 	"Role": "FRONTEND WEB DEVELOPER",
-	"welcomeMessage": "Hi, welcome to my website. Here you will find a copy of my resume, link to my Github account, projects and person tools I use.",
+	"welcomeMessage": "Welcome to my website. Here you will find a copy of my resume. Link to my Contact Information and Github Account. & Projects I have completed.",
 	"Skills": ["Bootstrap", "HTML", "Javascript", "CSS", "jQuery", "HTML5", "bug Test"] ,
-	"contacts": [
-		{
+	"contact" : {
 
-		"Cellphone": "fakenumber",
-		"emailAddress": "professional@email.com",
-		"twitter": "Twitter@twitter.com",
-		"Location": "****,Ontario,Canada.", 
-		"Github": "Link to github",
-		"Twitter": "Link to twitter",
-		"location": "brampton, Ontario, Canada"
+		"Cellphone" : "647-287-3777",
+		"emailAddress" : "professional@email.com",
+		"Github" : "https://github.com/RickArora/",
+		"twitter" : "@RickProg",
+		"location" : "Brampton, Ontario, Canada",
+		"Biopic" : "Images/Twitcon.jpg"
+	
 	}
-	]
-
 };
 
 var formattedName = HTMLheaderName.replace("%data%", bio.Name);
 var formattedRole = HTMLheaderRole.replace("%data%", "FRONTEND WEBDEVELOPER");
+var formattedWel = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+var formattedMobile = HTMLmobile.replace("%data%", bio.contact.Cellphone);
+var formattedemail = HTMLemail.replace("%data%", bio.contact.emailAddress);
+var formattedtwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
+var formattedgithub = HTMLgithub.replace("%data%", bio.contact.Github);
+var formattedlocation = HTMLlocation.replace("%data%", bio.contact.location);
+var formattedbipic = HTMLbioPic.replace("%data%", bio.contact.Biopic);
+var formattedskills = HTMLskills.replace("%data%", bio.Skills);
+var formattedskillsStart = HTMLskillsStart.replace("%data%", bio.Skills);
 
+$("#header").prepend(formattedWel);
+$("#header").prepend(formattedMobile);
+$("#header").prepend(formattedemail);
+$("#header").prepend(formattedtwitter);
+$("#header").prepend(formattedgithub);
+$("#header").prepend(formattedlocation);
+$("#header").prepend(formattedbipic);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
@@ -36,7 +49,7 @@ var projects = {
 			"Dates": "2015",
 			"Description": "Built the basis of my portfolio website using bootstrap, html5 & css.",
 		"Images": [
-		"Images/fry.jpg"]
+		"Images/p1.png"]
 
 		}
 	]

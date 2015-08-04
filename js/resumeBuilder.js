@@ -242,17 +242,17 @@ $(".education-entry").append(formattedMajor);
 
 var onlineCourse = function() { 
 	for (onCourse in education.onlineCourses)
-		$("education").append(HTMLonlineClasses)
+		$("#education").append(HTMLonlineClasses)
 		var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[onCourse].title);
 		var formattedtSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[onCourse].school);
 		var formattedtDate = HTMLonlineDates.replace("%data%",education.onlineCourses[onCourse].year);
 		var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[onCourse].url);
 
-		var formattedOnline = formattedTitle + formattedtSchool + formattedUrl + formattedDate;
+		var formattedOnline = formattedTitle + formattedtSchool + formattedUrl + formattedDate
+}
 
 $("#education").append(formattedOnline);
 
-}
 
 onlineCourse();
 

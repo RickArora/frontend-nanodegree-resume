@@ -3,15 +3,15 @@ var bio = {
 
 	"Name":"Ricky Arora",
 	"Role": "FRONTEND WEB DEVELOPER",
-	"welcomeMessage": "Welcome to my website. Here you will find a copy of my resume. Link to my Contact Information and Github Account. & Projects I have completed.",
+	"welcomeMessage": "Welcome to my website. Here you will find a copy of my resume. Link to my Contact Information, Github Account & Projects I have completed.",
 	"Skills": ["Bootstrap", "HTML", "Javascript", "CSS", "jQuery", "HTML5", "bug Test"] ,
 	"contact" : {
 
-		"Cellphone" : "647-287-3777",
-		"emailAddress" : "professional@email.com",
+		"Cellphone" : "647-287-3777  ",
+		"emailAddress" : "rickprogramming@gmail.com  ",
 		"Github" : "https://github.com/RickArora/",
-		"twitter" : "@RickProg",
-		"location" : "50 Kennedy Rd S, Brampton, ON L6W 3E7, Canada",
+		"twitter" : "@RickProg  ",
+		"location" : " Brampton, Ontario",
 		"Biopic" : "Images/Twitcon.jpg"
 	
 	}
@@ -63,7 +63,7 @@ var work = {
 		"title": "Computer Technician",
 		"dates": "March 2015 - July 2015 (Co-Op Position)",
 		"description": "Repaired Computers by testing hard drives, testing all the hardware, installing programs and reformatting Computers. Also assisted with customer service.",
-		"location": "Brampton,Ontario,Canada"
+		"location": "50 Kennedy Rd S, Brampton, ON L6W 3E7, Canada"
 		}
 	]
 }
@@ -84,10 +84,12 @@ var education = {
 
 	"schools" : [
 		{
-			"name": "Private School",
-			"city": "Private City",
-			"credential": "highschooldiploma",
-			"location": "45 Daviselm Drive, Brampton, ON L6X 0Z3"
+			"name": "Sheridan College",
+			"degree": "Computers Systems Technician (Complete in - 2017)",
+			"location": "Sheridan College, Brampton, Ontario, Canada",
+			"major": "Computer programming",
+			"dates": "2015-2017",
+
 		},
 	],
 		"onlineCourses" : [
@@ -96,8 +98,31 @@ var education = {
 			"school": "Udacity",
 			"year": "2015",
 			"url": "do later",
-			"location": "9 roseville drive, l6y 2g7, brampton, ontario, Canada"
+
+			"title":"How to use Git & Github",
+			"school": "Udacity",
+			"year": "2015",
+			"url":"fill",
+
+			"title": "Responsive Images" ,
+			"school": "Udacity",
+			"year": "2015",
+			"url":"fill",
+
+
+			"title": "Responsive Web Design Fundumentals",
+			"school": "Udacity", 
+			"year": "2015",
+			"url":"fill",
+
+
+			"title": "Javascript Basics",
+			"school": "Udacity",
+			"year": "2015",
+			"url":"fill",
+
 		}
+
 	]	
 };
 
@@ -135,8 +160,8 @@ for (job in work.jobs) {
 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
 	var formattedDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].Location);
-	var formattedDateDescription = formattedLocation + formattedDate + formattedDescription;
+	var formattedlocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+	var formattedDateDescription = formattedlocation + formattedDate + formattedDescription;
 	$(".work-entry:last").append(
 		formattedEmployerTitle);
 	$(".work-entry:last").append(
@@ -205,6 +230,39 @@ $('#header').prepend(internationalizeButton)
 }
 
 $('#mapDiv').append(googleMap);
+
+$('#footerContacts').append(bio.contact.twitter);
+$('#footerContacts').append(bio.contact.Cellphone);
+$('#footerContacts').append(bio.contact.emailAddress);
+
+
+$("#education").append(HTMLschoolStart)
+var formattedName = HTMLschoolStart.replace("%data%", education.schools.name);
+var formattedDegree = HTMLschoolStart.replace("%data%", education.schools.degree);
+var formattedDates = HTMLschoolStart.replace("%data%", education.schools.dates);
+var formattedLocation = HTMLschoolStart.replace("%data%", education.schools.location);
+var formattedMajor = HTMLschoolStart.replace("%data%", education.schools.major);
+
+var formattedSchool = formattedName + formattedDegree + formattedDates + formattedLocation + formattedMajor;
+
+$('#education').append(formattedSchool);
+
+
+
+var onlineCourse = function() { 
+	for (onCourse in education.onlineCourses)
+		$("education").append(HTMLonlineClasses)
+		var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[onCourse].title);
+		var formattedtSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[onCourse].school);
+		var formattedtDate = HTMLonlineDates.replace("%data%",education.onlineCourses[onCourse].year);
+		var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[onCourse].url);
+
+		var formattedOnline = formattedTitle + formattedtSchool + formattedUrl + formattedDate;
+
+$("#education").append(formattedOnline);
+
+}
+
 
 
 

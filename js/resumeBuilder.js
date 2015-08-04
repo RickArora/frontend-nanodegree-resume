@@ -68,17 +68,6 @@ var work = {
 	]
 }
 
-/* work.jobPos = "Computer Technician"
-
-work.jobEmployer = "*******"
-
-work.jobYear = "Feb 2015 - July 2015 (CO-OP Position)"
-
-work.jobCity = "******"
-
-work.jobDescript = "Repaired computer hardware, reinstalled OS's, dealt with customers."
-
-*/
 
 var education = {
 
@@ -97,29 +86,29 @@ var education = {
 			"title": "Intro to HTML & CSS",
 			"school": "Udacity",
 			"year": "2015",
-			"url": "do later",
+			"url": "do later",},
 
-			"title":"How to use Git & Github",
+			{"title":"How to use Git & Github",
 			"school": "Udacity",
 			"year": "2015",
-			"url":"fill",
+			"url":"fill",},
 
-			"title": "Responsive Images" ,
+			{"title": "Responsive Images" ,
 			"school": "Udacity",
 			"year": "2015",
-			"url":"fill",
+			"url":"fill",},
 
 
-			"title": "Responsive Web Design Fundumentals",
+			{"title": "Responsive Web Design Fundumentals",
 			"school": "Udacity", 
 			"year": "2015",
-			"url":"fill",
+			"url":"fill",},
 
 
-			"title": "Javascript Basics",
+			{"title": "Javascript Basics",
 			"school": "Udacity",
 			"year": "2015",
-			"url":"fill",
+			"url":"fill"
 
 		}
 
@@ -243,9 +232,11 @@ var formattedDates = HTMLschoolStart.replace("%data%", education.schools.dates);
 var formattedLocation = HTMLschoolStart.replace("%data%", education.schools.location);
 var formattedMajor = HTMLschoolStart.replace("%data%", education.schools.major);
 
-var formattedSchool = formattedName + formattedDegree + formattedDates + formattedLocation + formattedMajor;
-
-$('#education').append(formattedSchool);
+$(".education-entry").append(formattedName);
+$(".education-entry").append(formattedDegree);
+$(".education-entry").append(formattedDates);
+$(".education-entry").append(formattedLocation);
+$(".education-entry").append(formattedMajor);
 
 
 
@@ -263,6 +254,7 @@ $("#education").append(formattedOnline);
 
 }
 
+onlineCourse();
 
 
 

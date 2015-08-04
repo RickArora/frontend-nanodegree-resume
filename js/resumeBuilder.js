@@ -11,7 +11,7 @@ var bio = {
 		"emailAddress" : "professional@email.com",
 		"Github" : "https://github.com/RickArora/",
 		"twitter" : "@RickProg",
-		"location" : "Brampton, Ontario, Canada",
+		"location" : "50 Kennedy Rd S, Brampton, ON L6W 3E7, Canada",
 		"Biopic" : "Images/Twitcon.jpg"
 	
 	}
@@ -63,7 +63,7 @@ var work = {
 		"title": "Computer Technician",
 		"dates": "March 2015 - July 2015 (Co-Op Position)",
 		"description": "Repaired Computers by testing hard drives, testing all the hardware, installing programs and reformatting Computers. Also assisted with customer service.",
-		"Location": "Brampton,Ontario,Canada"
+		"location": "Brampton,Ontario,Canada"
 		}
 	]
 }
@@ -86,7 +86,8 @@ var education = {
 		{
 			"name": "Private School",
 			"city": "Private City",
-			"credential": "highschooldiploma"
+			"credential": "highschooldiploma",
+			"location": "45 Daviselm Drive, Brampton, ON L6X 0Z3"
 		},
 	],
 		"onlineCourses" : [
@@ -94,7 +95,8 @@ var education = {
 			"title": "Intro to HTML & CSS",
 			"school": "Udacity",
 			"year": "2015",
-			"url": "do later"
+			"url": "do later",
+			"location": "9 roseville drive, l6y 2g7, brampton, ontario, Canada"
 		}
 	]	
 };

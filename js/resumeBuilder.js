@@ -75,7 +75,7 @@ var projects = {
 	"Projects": [
 		{
 			"Title": "Portfolio Website",
-			"Site": "RickyArora.com", 
+			"Site": "www.RickyArora.com", 
 			"Dates": "2015",
 			"Description": "Built the basis of my portfolio website using bootstrap, html5 & css.",
 		"Images": [
@@ -122,7 +122,7 @@ var displayWork = function(){
 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
 	var formattedDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].Location);
+	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 	var formattedDateDescription = formattedLocation + formattedDate + formattedDescription;
 	$(".work-entry:last").append(
 		formattedEmployerTitle);
@@ -153,42 +153,42 @@ var education = {
 			"title": "Intro to HTML & CSS",
 			"school": "Udacity",
 			"year": "2015",
-			"url": "do later",},
+			"url": "www.udacity.com/course/intro-to-html-and-css--ud304"},
 
 			{"title":"How to use Git & Github",
 			"school": "Udacity",
 			"year": "2015",
-			"url":"fill",},
+			"url":"https://www.udacity.com/course/how-to-use-git-and-github--ud775",},
 
 			{"title": "Responsive Images" ,
 			"school": "Udacity",
 			"year": "2015",
-			"url":"fill",},
+			"url":"https://www.udacity.com/course/responsive-images--ud882",},
 
 
 			{"title": "Responsive Web Design Fundumentals",
 			"school": "Udacity", 
 			"year": "2015",
-			"url":"fill",},
+			"url":"https://www.udacity.com/course/responsive-web-design-fundamentals--ud893",},
 
 
 			{"title": "Javascript Basics",
 			"school": "Udacity",
 			"year": "2015",
-			"url":"fill"
+			"url":"https://www.udacity.com/course/javascript-basics--ud804"
 
 		}
 
 	]
 };
 
-$("#education").append(HTMLschoolStart)
+$("#education").append(HTMLschoolStart);
 for (school in education.schools) {
-var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major); }
+	var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+	var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+	var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+	var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+	var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major); }
 
 
 $(".education-entry").append(formattedName);
@@ -198,24 +198,23 @@ $(".education-entry").append(formattedLocation);
 $(".education-entry").append(formattedMajor);
 
 
-
 var onlineCourse = function() { 
-	for (onCourse in education.onlineCourses)
-		$("#education").append(HTMLonlineClasses)
+	$(".education-entry").append(HTMLonlineClasses);
+	for (onCourse in education.onlineCourses) {
 		var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[onCourse].title);
-		var formattedtSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[onCourse].school);
+		var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[onCourse].school);
 		var formattedtDates = HTMLonlineDates.replace("%data%",education.onlineCourses[onCourse].year);
 		var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[onCourse].url);
+		$(".education-entry").append(formattedTitle);
+		$(".education-entry").append(formattedSchool);
+		$(".education-entry").append(formattedDates);
+		$(".education-entry").append(formattedUrl);
 
-		var formattedOnline = formattedTitle + formattedtSchool + formattedUrl + formattedDates;
-
-$(".education-entry").append(formattedOnline);
-
-
+	}
 }
 
 
-onlineCourse();
+ onlineCourse();
 // END OF WORK ALL MISC FROM HEREON IN
 
 $(document).click(function(loc) { 

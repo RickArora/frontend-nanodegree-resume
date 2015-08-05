@@ -1,4 +1,3 @@
-
 var bio = {
 
 	"Name":"Ricky Arora",
@@ -84,7 +83,7 @@ var projects = {
 
 		}
 	]
-};
+}
 
 
 projects.display = function() {
@@ -137,50 +136,48 @@ work.display();
 
 
 var education = {
-
-	"schools": [
-		{
-			"name": "Sheridan College",
-			"degree": "Computers Systems Technician (Complete in - 2017)",
-			"location": "Sheridan College, Brampton, Ontario, Canada",
-			"major": "Computer programming",
-			"dates": "2015-2017",
-
-		},
-	],
-		"onlineCourses" : [
-		{
-			"title": "Intro to HTML & CSS",
-			"school": "Udacity",
-			"year": "2015",
-			"url": "www.udacity.com/course/intro-to-html-and-css--ud304"},
-
-			{"title":"How to use Git & Github",
-			"school": "Udacity",
-			"year": "2015",
-			"url":"https://www.udacity.com/course/how-to-use-git-and-github--ud775",},
-
-			{"title": "Responsive Images" ,
-			"school": "Udacity",
-			"year": "2015",
-			"url":"https://www.udacity.com/course/responsive-images--ud882",},
-
-
-			{"title": "Responsive Web Design Fundumentals",
-			"school": "Udacity", 
-			"year": "2015",
-			"url":"https://www.udacity.com/course/responsive-web-design-fundamentals--ud893",},
-
-
-			{"title": "Javascript Basics",
-			"school": "Udacity",
-			"year": "2015",
-			"url":"https://www.udacity.com/course/javascript-basics--ud804"
-
-		}
-
-	]
-};
+    "schools": [
+        {
+            "name": "Sheridan College",
+            "degree": "Computers Systems Technician (Complete in - 2017)",
+            "location": "Sheridan College, Brampton, Ontario, Canada",
+            "major": "Computer programming",
+            "dates": "2015-2017"
+        }
+    ],
+    "onlineCourses": [
+        {
+            "title": "Intro to HTML & CSS",
+            "school": "Udacity",
+            "year": "2015",
+            "url": "www.udacity.com/course/intro-to-html-and-css--ud304"
+        },
+        {
+            "title": "How to use Git & Github",
+            "school": "Udacity",
+            "year": "2015",
+            "url": "https://www.udacity.com/course/how-to-use-git-and-github--ud775"
+        },
+        {
+            "title": "Responsive Images",
+            "school": "Udacity",
+            "year": "2015",
+            "url": "https://www.udacity.com/course/responsive-images--ud882"
+        },
+        {
+            "title": "Responsive Web Design Fundumentals",
+            "school": "Udacity",
+            "year": "2015",
+            "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
+        },
+        {
+            "title": "Javascript Basics",
+            "school": "Udacity",
+            "year": "2015",
+            "url": "https://www.udacity.com/course/javascript-basics--ud804"
+        }
+    ]
+}
 
 education.display = function() {
 

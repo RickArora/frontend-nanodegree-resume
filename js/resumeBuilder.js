@@ -18,6 +18,7 @@ var bio = {
 };
 
 
+bio.display = function() {
 
 if (bio.Skills.length > 0) { 
 	$("#header").append(HTMLskillsStart);
@@ -42,7 +43,7 @@ if (bio.Skills.length > 0) {
 	$("#skills").append(formattedSkill);
 	formattedSkill = HTMLskills.replace("%data%", bio.Skills[6]);
 	}
-
+}
 
 
 var formattedName = HTMLheaderName.replace("%data%", bio.Name);
@@ -86,7 +87,7 @@ var projects = {
 };
 
 
-
+projects.display = function() {
 	for (project in projects.Projects) {
 		$('#projects').append(HTMLprojectStart)		
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.Projects[project].Title);
@@ -96,9 +97,9 @@ var projects = {
 		var formattedDescriptionImage = formattedImage + formattedDates + formattedDescription + formattedTitle;
 
 		$("#projects").append(formattedDescriptionImage); 
+	}
 }
-
-// END OF PROJECTS
+projects.display();
 
 var work = {
 	"jobs": [
@@ -112,7 +113,7 @@ var work = {
 	]
 }
 
-var displayWork = function(){
+work.display = function() {
 
 	for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
@@ -128,12 +129,11 @@ var displayWork = function(){
 		formattedEmployerTitle);
 	$(".work-entry:last").append(
 		formattedDateDescription);
-}
-
+	}
 
 };
 
-displayWork();
+work.display();
 
 
 var education = {
@@ -182,6 +182,8 @@ var education = {
 	]
 };
 
+education.display = function() {
+
 $("#education").append(HTMLschoolStart);
 for (school in education.schools) {
 	var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -198,7 +200,6 @@ $(".education-entry").append(formattedLocation);
 $(".education-entry").append(formattedMajor);
 
 
-var onlineCourse = function() { 
 	$(".education-entry").append(HTMLonlineClasses);
 	for (onCourse in education.onlineCourses) {
 		var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[onCourse].title);
@@ -214,7 +215,7 @@ var onlineCourse = function() {
 }
 
 
- onlineCourse();
+education.display();
 // END OF WORK ALL MISC FROM HEREON IN
 
 $(document).click(function(loc) { 

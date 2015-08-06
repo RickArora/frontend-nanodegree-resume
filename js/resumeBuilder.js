@@ -24,23 +24,23 @@ if (bio.Skills.length > 0) {
 	var formattedSkill = HTMLskills.replace("%data%", bio.Skills[0]);
 	$("#skills").append(formattedSkill);
 
-	$("#skills").append(formattedSkill);
 	formattedSkill = HTMLskills.replace("%data%", bio.Skills[1]);
-
 	$("#skills").append(formattedSkill);
+	
 	formattedSkill = HTMLskills.replace("%data%", bio.Skills[2]);
-
 	$("#skills").append(formattedSkill);
+	
 	formattedSkill = HTMLskills.replace("%data%", bio.Skills[3]);
-
 	$("#skills").append(formattedSkill);
+	
 	formattedSkill = HTMLskills.replace("%data%", bio.Skills[4]);
-
 	$("#skills").append(formattedSkill);
+	
 	formattedSkill = HTMLskills.replace("%data%", bio.Skills[5]);
-
 	$("#skills").append(formattedSkill);
+	
 	formattedSkill = HTMLskills.replace("%data%", bio.Skills[6]);
+	$("#skills").append(formattedSkill);
 	}
 }
 
@@ -69,6 +69,7 @@ $("#header").prepend(formattedName);
 
 // END OF BIO 
 
+bio.display()
 
 
 var projects = {
